@@ -1,0 +1,17 @@
+{
+  "name": "pomodoro-timer-styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.12.20",
+    "esbuild-plugin-sass": "^0.6.0"
+  }
+}

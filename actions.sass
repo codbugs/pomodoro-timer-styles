@@ -1,0 +1,119 @@
+@use "sass:color"
+@use './_base' as base
+
+.button
+    border: solid 1px base.$third-color
+    border-radius: 5px
+    color: base.$third-color
+    font-family: base.$primary-font-family
+    font-weight: 400
+    outline: none
+    padding: 5px 25px
+    text-transform: uppercase
+    min-width: 150px
+
+    &:hover
+            font-weight: 700
+    
+    &.primary
+        background-color: base.$third-color
+        color: white
+
+    &.link
+        border: 0
+        background: inherit
+        color: base.$secondary-color
+        text-transform: inherit
+        min-width: inherit
+        margin: 0
+        padding: 0
+
+        &:hover
+            font-weight: bolder
+        
+        &.primary
+            color: base.$third-color
+
+.form
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+
+    .field
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        padding-bottom: 40px
+
+        .label
+            color: base.$primary-color
+            font-family: base.$primary-font-family
+            font-size: base.$text-font-size * 1.2
+            font-weight: 700
+            margin-bottom: 10px
+
+        input
+            background-color: base.$third-color-lightest
+            border-radius: 5px
+            color: base.$secondary-color
+            font-family: base.$primary-font-family
+            font-size: base.$text-font-size * 1.2
+            outline: none
+            padding: 7px 10px
+
+            &:focus
+                color: base.$third-color
+        
+        small
+            color: color.adjust(base.$secondary-color, $whiteness: 80%)
+            font-size: base.$text-font-size * 0.85
+            margin-top: 5px
+        
+        .error
+            color: base.$fourth-color
+            font-weight: 700
+
+.icon
+    align-items: center
+    fill: base.$secondary-color
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 32px
+    width: 32px
+    margin: 0 10px
+
+    &:hover
+        fill: base.$third-color
+
+   
+@keyframes rotation
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(359deg)
+
+.spinner
+    animation: rotation 2s linear infinite
+    height: 128px
+    stroke: base.$primary-color
+
+.timer
+    border: solid 5px base.$secondary-color
+    border-radius: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 225px
+    text-align: center
+    width: 225px
+
+    .value
+        color: base.$secondary-color
+        font-size: base.$text-font-size * 4
+    
+    &.running
+        border-color: base.$third-color
+
+        .value
+            color: base.$third-color

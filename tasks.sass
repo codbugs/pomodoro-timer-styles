@@ -1,0 +1,44 @@
+@use './_base' as base
+
+.task
+    border-left: solid 5px base.$primary-color
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: flex-start
+    margin-right: 30px
+    margin-bottom: 40px
+    width: 350px
+    padding-left: 30px
+
+    .actions
+        justify-content: flex-start
+        margin-top: 0
+
+        .button
+            margin: 0
+            margin-right: 30px
+    
+    .content
+        padding-bottom: 20px
+
+        .metas
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            justify-content: flex-start
+
+            .meta
+                color: base.$secondary-color
+                font-family: base.$primary-font-family
+                font-size: base.$text-font-size * 0.85
+                font-style: italic
+                padding-bottom: 5px
+                
+        
+        .title
+            color: base.$primary-color
+            font-family: base.$primary-font-family
+            font-size: base.$text-font-size * 1.2
+            font-weight: 700
+            padding-bottom: 15px
